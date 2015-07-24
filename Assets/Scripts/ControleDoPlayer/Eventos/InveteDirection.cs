@@ -10,11 +10,11 @@ public class InveteDirection : ControlerEventos {
 	internal override void Update ()
 	{
 		base.Update ();
-		StartCoroutine(inveteDirection(ControlerEventos.EventStart));
+		StartCoroutine(inveteDirection(ControlerEventos.EventStart, ControlerEventos.RandomVelor));
 	}
-	IEnumerator inveteDirection(bool StateEvent)
+	IEnumerator inveteDirection(bool StateEvent, int Valor)
 	{
-		if(StateEvent == true && ControlerEventos.EventAtivo == false && DurationEvent <= 10)
+		if(StateEvent == true && Valor == 0 && ControlerEventos.EventAtivo == false && DurationEvent <= 10)
 		{
 			DurationEvent += Time.deltaTime;
 			if(BasePlayer.FlagRotateLeft)

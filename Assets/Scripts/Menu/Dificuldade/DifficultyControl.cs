@@ -7,15 +7,14 @@ using System.Collections;
 public class DifficultyControl : MonoBehaviour {
 
 	public static string _difficulty;
-	// Use this for initialization
-	void Start () {
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	void Start () {
 		Difficulty(_difficulty);
 	}
+
+	void Update () {
+	}
+
 	void Difficulty(string Difficulty)
 	{
 		switch(Difficulty)

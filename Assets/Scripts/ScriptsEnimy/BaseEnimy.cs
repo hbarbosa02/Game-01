@@ -9,6 +9,7 @@ public class BaseEnimy : MonoBehaviour {
 	public Transform _Target;
 	public static float Speed;
 	public string _tag;
+	internal bool _flagDestroyer;
 	// Use this for initialization
 	internal virtual void Start () {
 	
@@ -20,7 +21,7 @@ public class BaseEnimy : MonoBehaviour {
 	{
 		if(other.gameObject.tag == _tag)
 		{
-			Destroy(gameObject);
+			_flagDestroyer = true;
 		}
 		else if(other.gameObject.tag != _tag)
 		{

@@ -10,17 +10,17 @@ public class SpeedDownEnimy : ControlerEventos {
 	internal override void Update()
 	{
 		base.Update ();
-		StartCoroutine(SpeedDOWN(ControlerEventos.EventStart, _speedDown));
+		StartCoroutine(SpeedDOWN(ControlerEventos.EventStart, ControlerEventos.RandomVelor, _speedDown));
 	}
-	IEnumerator SpeedDOWN(bool StateEvent, float SpeedUP)
+	IEnumerator SpeedDOWN(bool StateEvent, int Valor, float SpeedDown)
 	{
-		if(StateEvent == true && ControlerEventos.EventAtivo == false)
+		if(StateEvent == true && Valor == 2 && ControlerEventos.EventAtivo == false)
 		{
 			//Afirmando que tem um evento em açao nesse moemnto
 			ControlerEventos.EventAtivo = true;
 			//Evento em açao.
 			float InitSpeed = BaseEnimy.Speed;
-			BaseEnimy.Speed -= SpeedUP;
+			BaseEnimy.Speed -= SpeedDown;
 			yield return new WaitForSeconds(5);//Duraçao do evento.
 			BaseEnimy.Speed = InitSpeed;
 			//Desativando o Evento.

@@ -7,8 +7,9 @@ using System.Collections;
 public class ControlerEventos : MonoBehaviour {
 
 	public string _tag;
+	public static int RandomVelor;
 	//Atributos Internos da Arvore da Classe Eventos
-	internal static bool _eventStart = true;
+	internal static bool _eventStart = false;
 	internal static bool EventStart
 	{
 		set{_eventStart = value;}
@@ -30,10 +31,12 @@ public class ControlerEventos : MonoBehaviour {
 		_eventStart = false;
 		_eventAtivo = false;
 	}
-	void OnCollisionEnter2D(Collision2D other)
+	public void ActiveEvento()
 	{
-		if(other.gameObject.tag == _tag)
+		if(ControlCoins._amountOfGold >= 10)//Condiçao para saber se ele tem moedas suficiente para tivar algum Evento
 		{
+			ControlCoins._amountOfGold -= 10;
+			RandomVelor = Random.Range(0,4);
 			_eventStart = true;
 		}
 	}

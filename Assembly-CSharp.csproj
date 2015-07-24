@@ -53,11 +53,14 @@
      <Compile Include="Assets\Scripts\ControleDoPlayer\Eventos\SpeedDownEnimy.cs" />
      <Compile Include="Assets\Scripts\ControleDoPlayer\Eventos\SpeedUp.cs" />
      <Compile Include="Assets\Scripts\ControleDoPlayer\Eventos\SpeedUpEnimy.cs" />
+     <Compile Include="Assets\Scripts\Menu\ActivePauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\ControlCoins.cs" />
      <Compile Include="Assets\Scripts\Menu\Dificuldade\ControlerButtons.cs" />
      <Compile Include="Assets\Scripts\Menu\Dificuldade\DifficultyControl.cs" />
      <Compile Include="Assets\Scripts\ScriptPlayer\BasePlayer.cs" />
      <Compile Include="Assets\Scripts\ScriptsEnimy\BaseEnimy.cs" />
      <Compile Include="Assets\Scripts\ScriptsEnimy\ControlEnemiesOnTheScene.cs" />
+     <Compile Include="Assets\Scripts\ScriptsEnimy\EnemiesOfPoints.cs" />
      <Compile Include="Assets\Scripts\ScriptsEnimy\Enimy\EnimyEmCurvas.cs" />
      <Compile Include="Assets\Scripts\ScriptsEnimy\Enimy\EnimyEmLinha.cs" />
  <Reference Include="UnityEngine.UI">

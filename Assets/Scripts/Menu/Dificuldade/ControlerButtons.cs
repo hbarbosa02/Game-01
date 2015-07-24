@@ -8,14 +8,24 @@ public class ControlerButtons : MonoBehaviour {
 
 	public void Facil()
 	{
-		DifficultyControl._difficulty = "Facil";
+		DifficultyControl._difficulty = "Facil";	
 	}
-	void Medio()
+	public void Medio()
 	{
 		DifficultyControl._difficulty = "Medio";
 	}
-	void Dificil()
+	public void Dificil()
 	{
 		DifficultyControl._difficulty = "Dificil";
+	}
+	public void ChangeDifficulty()
+	{
+	}
+	public void Ponctuation()
+	{
+	}
+	public void Close()
+	{
+		Application.Quit();
 	}
 }

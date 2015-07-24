@@ -10,17 +10,17 @@ public class SpeedDown : ControlerEventos {
 	internal override void Update()
 	{
 		base.Update ();
-		StartCoroutine(SpeedDOWN(ControlerEventos.EventStart, _speedDown));
+		StartCoroutine(SpeedDOWN(ControlerEventos.EventStart, ControlerEventos.RandomVelor, _speedDown));
 	}
-	IEnumerator SpeedDOWN(bool StateEvent, float SpeedUP)
+	IEnumerator SpeedDOWN(bool StateEvent, int Valor, float SpeedDown)
 	{
-		if(StateEvent == true && ControlerEventos.EventAtivo == false)
+		if(StateEvent == true && Valor == 1 && ControlerEventos.EventAtivo == false)
 		{
 			//Afirmando que tem um evento em açao nesse moemnto
 			ControlerEventos.EventAtivo = true;
 			//Evento em açao.
 			float InitSpeed = BasePlayer.Speed;
-			BasePlayer.Speed -= SpeedUP;
+			BasePlayer.Speed -= SpeedDown;
 			yield return new WaitForSeconds(5);//Duraçao do evento.
 			BasePlayer.Speed = InitSpeed;
 			//Desativando o Evento.

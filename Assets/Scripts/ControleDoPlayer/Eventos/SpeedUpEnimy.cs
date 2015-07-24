@@ -10,11 +10,11 @@ public class SpeedUpEnimy : ControlerEventos {
 	internal override void Update()
 	{
 		base.Update ();
-		StartCoroutine(SpeedUP(ControlerEventos.EventStart, _speedUP));
+		StartCoroutine(SpeedUP(ControlerEventos.EventStart, ControlerEventos.RandomVelor, _speedUP));
 	}
-	IEnumerator SpeedUP(bool StateEvent, float SpeedUP)
+	IEnumerator SpeedUP(bool StateEvent, int Valor, float SpeedUP)
 	{
-		if(StateEvent == true && ControlerEventos.EventAtivo == false)
+		if(StateEvent == true && Valor == 4 && ControlerEventos.EventAtivo == false)
 		{
 			//Afirmando que tem um evento em açao nesse moemnto
 			ControlerEventos.EventAtivo = true;
