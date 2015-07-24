@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 61cc696b026e5194d8752d2a492a1f46
+timeCreated: 1437575424
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - SpriteShied: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  - Shield: {instanceID: 0}
+  - SpriteCelulaDeForcaa: {fileID: 10911, guid: 0000000000000000f000000000000000,
+      type: 0}
+  - CelulaDeForca: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
