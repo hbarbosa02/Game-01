@@ -7,8 +7,11 @@ using System.Collections;
 public class ControlerEventos : MonoBehaviour {
 
 	public string _tag;
-	public static int RandomVelor;
+	public GameObject Shild;
+
 	//Atributos Internos da Arvore da Classe Eventos
+	internal static int RandomVelor;
+
 	internal static bool _eventStart = false;
 	internal static bool EventStart
 	{
@@ -26,6 +29,7 @@ public class ControlerEventos : MonoBehaviour {
 	internal virtual void Update () {
 	}
 	//----------------------------------------------
+
 	public static void EventOff()
 	{
 		_eventStart = false;
@@ -36,7 +40,7 @@ public class ControlerEventos : MonoBehaviour {
 		if(ControlCoins._amountOfGold >= 10)//Condiçao para saber se ele tem moedas suficiente para tivar algum Evento
 		{
 			ControlCoins._amountOfGold -= 10;
-			RandomVelor = Random.Range(0,4);
+			RandomVelor = Random.Range(0,5);
 			_eventStart = true;
 		}
 	}

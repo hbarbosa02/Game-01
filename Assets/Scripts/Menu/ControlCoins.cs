@@ -10,5 +10,6 @@ public class ControlCoins : MonoBehaviour {
 		 
 	void Update () {
 		PlayerPrefs.SetInt("Gold", _amountOfGold);
+	
 	}
 }

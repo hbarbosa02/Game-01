@@ -6,11 +6,13 @@ using System.Collections;
 using System.Collections.Generic;
 public class ControlEnemiesOnTheScene : MonoBehaviour {
 	
-	public static int _numberMaxOfEnemies = 6;
+	public static int _numberMaxOfEnemies = 4;
 	public List<GameObject> _enemies; 
 	public float _waitingTime = 1.5f;
 
-	int _numberOfEnemies = 0;
+	public static int _numberOfEnemies = 0;
+	public static float _waitingTimeMin = 0.5f;
+
 	float _time = 0;
 	Vector2 _positionOfEnemies;
 
@@ -27,6 +29,10 @@ public class ControlEnemiesOnTheScene : MonoBehaviour {
 		_time += Time.deltaTime;
 		if(_numberOfEnemies <= NumberMaxOfEnemies && _time >= _waitingTime)
 		{
+			if(_waitingTime > _waitingTimeMin)
+				_waitingTime -= 0.1f;
+
+			_numberOfEnemies ++;
 			_time = 0;
 		}
 	}

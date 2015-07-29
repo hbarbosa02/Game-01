@@ -22,6 +22,7 @@ public class BaseEnimy : MonoBehaviour {
 		if(other.gameObject.tag == _tag)
 		{
 			_flagDestroyer = true;
+			ControlEnemiesOnTheScene._numberOfEnemies --;
 		}
 		else if(other.gameObject.tag != _tag)
 		{
